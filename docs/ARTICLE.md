@@ -47,7 +47,7 @@ To keep this article focused on its primary goal, we will not create a new Strap
 
 The demo application would be an eCommerce store containing localized content for courses to be sold. Using the [i18n plugin](https://strapi.io/features/internationalization), the eCommerce application would serve localized content from two locales to a front-end application built with Gatsby.
 
-The complete app should look like this:
+The complete app should be similar to this:
 ![Complete app](https://www.dropbox.com/s/vfspezp4nis5xnm/placeholder.png?raw=1)
 
 # What you will learn
