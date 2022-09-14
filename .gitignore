@@ -1,3 +1,4 @@
 # Ignore vale
 /bin
 vale
+.vale.ini
