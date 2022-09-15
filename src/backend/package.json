@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.0.0",
-    "lodash.set": "^4.3.2",
-    "mime-types": "^2.1.27",
-    "@strapi/strapi": "4.3.8",
-    "@strapi/plugin-users-permissions": "4.3.8",
+    "@strapi/plugin-graphql": "4.3.8",
     "@strapi/plugin-i18n": "4.3.8",
-    "better-sqlite3": "7.4.6"
+    "@strapi/plugin-users-permissions": "4.3.8",
+    "@strapi/strapi": "4.3.8",
+    "better-sqlite3": "7.4.6",
+    "lodash.set": "^4.3.2",
+    "mime-types": "^2.1.27"
   },
   "name": "backend",
   "private": true,
