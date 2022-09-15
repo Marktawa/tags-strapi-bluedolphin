@@ -33,58 +33,73 @@ With the vast number of languages spoken by users worldwide in different regions
 
 Through the [i18n plugin](https://docs.strapi.io/developer-docs/latest/plugins/i18n.html#installation), Strapi supports the development of this functionality by providing application admins the ability to store data in different locales and serve them to users within the respective locales.
 
-Within this article, we will explore more about the i18n plugin.
-If you are interested in trying out the result of this tutorial before going through the article, we have it here for you to try out.
+In this article, we will explore more about the i18n plugin.
 
 # Goal
 
-This article aims to help you understand what Internationalization is and how you can implement it in a Strapi application. This article is broken down into the two sections below;
+This article aims to help you understand what Internationalization is and how you can implement it in a Strapi application. This article is broken down into the two sections:
 
 - Understanding what Internationalization is at a broad level.
 - Using the [i18n plugin](https://docs.strapi.io/developer-docs/latest/plugins/i18n.html#installation) to implement Internationalization within your Strapi application.
 
 To keep this article focused on its primary goal, we will not create a new Strapi application, but instead use this [Strapi eCommerce template](https://github.com/strapi/strapi-template-ecommerce).
 
-The demo application would be an eCommerce store containing localized content for courses to be sold. Using the [i18n plugin](https://strapi.io/features/internationalization), the eCommerce application would serve localized content from two locales to a front-end application built with Gatsby.
+The demo application will be an eCommerce store containing localized content for courses to be sold. Using the [i18n plugin](https://strapi.io/features/internationalization), the eCommerce application will serve localized content from two locales to a front-end application built with Gatsby.
 
 The complete app should be similar to this:
 ![Complete app](https://www.dropbox.com/s/vfspezp4nis5xnm/placeholder.png?raw=1)
 
+If you are interested in trying out the finished app of this tutorial before going through the article, [clone the Github repo](https://github.com/Marktawa/tags-strapi-bluedolphin).
+
 # What you will learn
 
 This article will help you understand what Internationalization is and how you can implement it in a new or existing Strapi application.
-If you are new to Strapi, Strapi is easy to learn and feature-rich headless content management system (CMS) with support for PostgreSQL, MongoDB, SQLite, MySQL, and MariaDB.
+
+If you are new to Strapi, Strapi is easy to learn and feature-rich headless content management system (CMS) with support for PostgreSQL, MongoDB, SQLite, MySQL, and MariaDB. Check out the [Strapi: Quickstart guide](https://docs.strapi.io/developer-docs/latest/getting-started/quick-start.html).
 
 # Prerequisites
 
-To run the two demo applications within this tutorial, you need to have node v12 installed on your local machine and understand React.js as we build out the front-end application.
+To follow along with this tutorial you need some knowledge of the following:
+
+- Javascript
+- Node.js
+- Shell (Bash)
+
+The following software should be installed:
+
+- **Node** *v14.x.x* or *v16.x.x*. Download Node from the [Download | Node.js page](https://nodejs.org/en/download/). I used Node *v16.14.2*.
+    
+- **npm** or **yarn**. npm ships with your Node installation. If you prefer yarn, install it as an npm package. Check [Installation | Yarn](https://classic.yarnpkg.com/en/docs/install). I used yarn *v1.22.15*.
+
+For a full rundown of all the requirements needed to run a Strapi app, check out the [Hardware and Software requirements](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html#hardware-and-software-requirements).
 
 # Introduction
 
-So far, you have seen the word [**Internationalization**](https://en.wikipedia.org/wiki/Internationalization) reoccur all over this article. — Let's pause at this point to understand what this recurring word really means.
+So far, you have seen the word [**Internationalization**](https://en.wikipedia.org/wiki/Internationalization) reoccur all over this article. Let's take a deep dive to understand what **Internationalization** really means.
 
-From the [W3C definition](https://www.w3.org/International/questions/qa-i18n.en#i18n), Internationalization is said to be "the design and development of a product, application or document content that enables easy localization for various target audiences that vary in culture, region, or language."
+From the [W3C definition](https://www.w3.org/International/questions/qa-i18n.en#i18n), internationalization is said to be "*the design and development of a product, application or document content that enables easy localization for various target audiences that vary in culture, region, or language.*"
 
-You would often find Internationalization shortened to i18n, with "i" and "n" representing the first and last letters. In contrast, the number 18 represents the total number of letters when "i" and "n" are subtracted.
+You would often find Internationalization shortened to **i18n**, with "i" and "n" representing the first and last letters. In contrast, the number 18 represents the total number of letters when "i" and "n" are subtracted.
 
 While Internationalization refers to designing a product for various target audiences, localization can be narrowed to refer to the **adaptation** of a product, application, or document content to meet the language, cultural and other requirements of a specific target market (a *locale*).
 
 One important thing to note is that the application of Internationalization and localization, as defined above, varies across different products as each product has its various target audience across other localities with differing cultural requirements.
+
 You would find the word **locale** used in various parts of this article. A locale refers to the language with which the content is being created with.
 
-For developers managing the content of their application using Strapi, the recently released i18n plugin provides admins with the means of localising the content served to their end-users.
+For developers managing the content of their application using Strapi, the i18n plugin provides admins with the means of localising the content served to their end-users.
 
 # Backend Setup
 
 # Step 1: Create Strapi Project
 
-For this tutorial, we'll use the [Ecommerce template](https://github.com/strapi/strapi-template-ecommerce) developed by Remi and connect a Gatsby app to it for fetching the pre-stored data.
+For this tutorial, we'll use the [Ecommerce template](https://github.com/strapi/starters-and-templates/tree/main/packages/templates/ecommerce) developed by [Rémi](https://github.com/remidej) from the Strapi Team. We will connect a Gatsby app to it for fetching the pre-stored data.
 
 >**Note**: 
 >
 >*For this tutorial, we will use yarn as the package manager. You can, however, use npm if preferred.*
 
-In your terminal, create an empty project directory to store your project. This folder would serve as the root folder. The frontend application and backend code will be stored in subdirectories. I will name my project directory `bluedolphin`.
+In your terminal, create an empty project directory to store your project. This folder would serve as the root folder. The frontend and backend code will be stored in subdirectories. I will name my project directory `bluedolphin`.
 
 ```bash
 $ mkdir bluedolphin
@@ -95,44 +110,57 @@ Change directory to the project directory `bluedolphin`.
 $ cd bluedolphin
 ```
 
-Initialize source control.
+Enable source control for your project by initializing a git repository.
+
 ```bash
 /bluedolphin $ git init
 ```
 
-Create a strapi application with the Ecommerce template:
+Create a strapi application with the Ecommerce template.
 ```bash
-/bluedolphin $ yarn create strapi-app backend --quickstart --template https://github.com/strapi/strapi-template-ecommerce 
+/bluedolphin $ yarn create strapi-app backend --quickstart --template https://github.com/strapi/strapi-template-ecommerce
+
+yarn create strapi-app backend --quickstart --template @strapi/template-ecommerce@1.0.0 ecommerce
 ```
 
 This command creates your Strapi app in the folder named `backend`. The `--quickstart` flag sets up your Strapi app with an SQLite database. The `--template` flag retrieves the specific template to install in your app. In this case, we retrieved the `strapi-template-ecommerce`, hosted by `strapi` on GitHub.
 
-After a successful installation, the CLI would automatically start the Strapi application. Open the **Strapi Admin Registration** interface from your web browser at [http://localhost:1337/admin](http://localhost:1337/admin) to create the admin user for your Strapi application.
+After a successful installation, the CLI would automatically start the Strapi application. 
 
-![Strapi Admin Registration](https://www.dropbox.com/s/vfspezp4nis5xnm/placeholder.png?raw=1)
+Open the **Strapi Admin Registration** interface from your web browser at [http://localhost:1337/admin](http://localhost:1337/admin). Create the admin user for your Strapi application and click **Let's Start**.
 
-The Ecommerce template you just cloned contains the following;
+![Strapi Admin Registration](https://www.dropbox.com/s/kivn0uqjh7v6kz1/strapi-admin-registration-tinyp.png?raw=1)
+
+The Ecommerce template you just cloned contains the following:
 
 - Three prebuilt collection types:
     - Categories
     - Users
     - Products
-- A project that has already populated data within the collection types above.
+- Entries (sample data) for the collection types above
+- Media assets
 
-![Strapi Dashboard](https://www.dropbox.com/s/vfspezp4nis5xnm/placeholder.png?raw=1)
+![Strapi Dashboard](https://www.dropbox.com/s/me3vnd26jcap3hn/strapi-dashboard-for-ecommerce-template-tinypng.png?raw=1)
 
 Feel free to modify the existing data. They provide a good starting point for building this project.
 
 # Step 2: Set up GraphQL plugin
 
-Next, install the [GraphQL plugin](https://docs.strapi.io/developer-docs/latest/plugins/graphql.html) to add GraphQL support to this Strapi Application.
+Stop the Strapi development server by pressing `Ctrl` plus `C` on your keyboard.
+
+Next, install the [GraphQL plugin](https://docs.strapi.io/developer-docs/latest/plugins/graphql.html) to add GraphQL support to this Strapi app.
 
 ```bash
 /bluedolphin $ cd backend
 /bluedolphin/backend $ yarn strapi install graphql
 ```
 
-After installing the plugin above, you can access your project's GraphiQL playground at [http://localhost:1337/graphql](http://localhost:1337/graphql) to write queries and mutations for working with the existing data.
+After installing the plugin, you can start your Strapi server.
+```bash
+/bluedolphin/backend $ yarn develop
+```
+
+You can access your project's GraphQL playground at [http://localhost:1337/graphql](http://localhost:1337/graphql) to write queries and mutations for working with the existing data.
 
 # Step 3: Configure Strapi Internationalization (i18n) Plugin
 
@@ -146,12 +174,11 @@ Rather than automatically translate delivered content, the i18n plugin allows de
 
 By default, the i18n plugin has `en` ( English ) as the default locale. However, more locales and their respective content can be added either using the Admin panel or the Strapi Content API.
 
-We would add one more locale to the categories content-type en locale shipped with the cloned eCommerce template for this guide.
+We will add one more locale to the **Categories** content-type.
 
+Using the [Admin panel](https://docs.strapi.io/developer-docs/latest/development/admin-customization.html), navigate to **the Settings** page of your Strapi application, then click on the **Internationalization** option within the **Global Settings**.
 
-Using the [Admin panel](https://docs.strapi.io/developer-docs/latest/development/admin-customization.html), navigate to **the Settings** page of your Strapi application, then click on the **Internationalization** option within the **Global Settings**
-
-![Internationalization Settings](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621048098879_locale-btn.png)
+![Internationalization Settings](https://www.dropbox.com/s/8g4kyhjaevwdful/internationalization-settings-tinyp.png?raw=1)
 
 # Step 4: Add A New Locale
 
