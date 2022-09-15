@@ -1,5 +1,5 @@
 # Ignore vale
-/bin
+/docs/bin
 vale
 .vale.ini
-/styles
+/docs/styles
