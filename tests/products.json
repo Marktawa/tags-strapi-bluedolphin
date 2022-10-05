@@ -1,0 +1,1910 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "attributes": {
+                "title": "Rust",
+                "description": "A language empowering everyone to build reliable and efficient software.",
+                "price": 1.84,
+                "slug": "rust",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:19.562Z",
+                "updatedAt": "2022-09-15T12:33:19.562Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 1,
+                        "attributes": {
+                            "name": "rust",
+                            "alternativeText": "rust",
+                            "caption": "rust",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_rust",
+                                    "hash": "thumbnail_rust_bb4719157e",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 17.44,
+                                    "url": "/uploads/thumbnail_rust_bb4719157e.png"
+                                }
+                            },
+                            "hash": "rust_bb4719157e",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 8.85,
+                            "url": "/uploads/rust_bb4719157e.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.620Z",
+                            "updatedAt": "2022-09-15T12:33:18.620Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 1,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 2,
+            "attributes": {
+                "title": "Swift",
+                "description": "Apple Developer",
+                "price": 1.84,
+                "slug": "swift",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:19.809Z",
+                "updatedAt": "2022-09-15T12:33:19.809Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 2,
+                        "attributes": {
+                            "name": "swift",
+                            "alternativeText": "swift",
+                            "caption": "swift",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_swift",
+                                    "hash": "thumbnail_swift_3e535ef76d",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 20.6,
+                                    "url": "/uploads/thumbnail_swift_3e535ef76d.png"
+                                }
+                            },
+                            "hash": "swift_3e535ef76d",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 10.96,
+                            "url": "/uploads/swift_3e535ef76d.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.672Z",
+                            "updatedAt": "2022-09-15T12:33:18.672Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 2,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 3,
+            "attributes": {
+                "title": "PostgreSQL",
+                "description": "The world's most advanced open source database",
+                "price": 1.84,
+                "slug": "postgre-sql",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:20.062Z",
+                "updatedAt": "2022-09-15T12:33:20.062Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 4,
+                        "attributes": {
+                            "name": "postgre-sql",
+                            "alternativeText": "postgre-sql",
+                            "caption": "postgre-sql",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_postgre-sql",
+                                    "hash": "thumbnail_postgre_sql_cab3f6b50a",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 23.7,
+                                    "url": "/uploads/thumbnail_postgre_sql_cab3f6b50a.png"
+                                }
+                            },
+                            "hash": "postgre_sql_cab3f6b50a",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 11.15,
+                            "url": "/uploads/postgre_sql_cab3f6b50a.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.779Z",
+                            "updatedAt": "2022-09-15T12:33:18.779Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 5,
+                            "attributes": {
+                                "name": "Database",
+                                "slug": "database",
+                                "createdAt": "2022-09-15T12:33:17.315Z",
+                                "updatedAt": "2022-10-05T19:30:58.161Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 3,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 4,
+            "attributes": {
+                "title": "Vue.js",
+                "description": "The Progressive JavaScript Framework.",
+                "price": 1.84,
+                "slug": "vue-js",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:20.311Z",
+                "updatedAt": "2022-09-15T12:33:20.311Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "name": "vue-js",
+                            "alternativeText": "vue-js",
+                            "caption": "vue-js",
+                            "width": 400,
+                            "height": 400,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_vue-js",
+                                    "hash": "thumbnail_vue_js_2ef6135568",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 11.71,
+                                    "url": "/uploads/thumbnail_vue_js_2ef6135568.png"
+                                }
+                            },
+                            "hash": "vue_js_2ef6135568",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 3.28,
+                            "url": "/uploads/vue_js_2ef6135568.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.724Z",
+                            "updatedAt": "2022-09-15T12:33:18.724Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "name": "Front",
+                                "slug": "front",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T19:33:22.329Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 4,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 5,
+            "attributes": {
+                "title": "SQLite",
+                "description": "Small. Fast. Reliable. Choose any three",
+                "price": 1.84,
+                "slug": "sq-lite",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:20.552Z",
+                "updatedAt": "2022-09-15T12:33:20.552Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "name": "sq-lite",
+                            "alternativeText": "sq-lite",
+                            "caption": "sq-lite",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_sq-lite",
+                                    "hash": "thumbnail_sq_lite_e183894393",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 13.91,
+                                    "url": "/uploads/thumbnail_sq_lite_e183894393.png"
+                                }
+                            },
+                            "hash": "sq_lite_e183894393",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 6.14,
+                            "url": "/uploads/sq_lite_e183894393.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.830Z",
+                            "updatedAt": "2022-09-15T12:33:18.830Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 5,
+                            "attributes": {
+                                "name": "Database",
+                                "slug": "database",
+                                "createdAt": "2022-09-15T12:33:17.315Z",
+                                "updatedAt": "2022-10-05T19:30:58.161Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 5,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 6,
+            "attributes": {
+                "title": "Ruby on Rails",
+                "description": "A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller ",
+                "price": 1.84,
+                "slug": "ruby-on-rails",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:20.783Z",
+                "updatedAt": "2022-09-15T12:33:20.783Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "ruby-on-rails",
+                            "alternativeText": "ruby-on-rails",
+                            "caption": "ruby-on-rails",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_ruby-on-rails",
+                                    "hash": "thumbnail_ruby_on_rails_d6761efc91",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 9.94,
+                                    "url": "/uploads/thumbnail_ruby_on_rails_d6761efc91.png"
+                                }
+                            },
+                            "hash": "ruby_on_rails_d6761efc91",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 5.12,
+                            "url": "/uploads/ruby_on_rails_d6761efc91.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.881Z",
+                            "updatedAt": "2022-09-15T12:33:18.881Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 6,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 7,
+            "attributes": {
+                "title": "GraphQL",
+                "description": "A query language for your API",
+                "price": 1.84,
+                "slug": "graph-ql",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:21.016Z",
+                "updatedAt": "2022-09-15T12:33:21.016Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 7,
+                        "attributes": {
+                            "name": "graph-ql",
+                            "alternativeText": "graph-ql",
+                            "caption": "graph-ql",
+                            "width": 400,
+                            "height": 400,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_graph-ql",
+                                    "hash": "thumbnail_graph_ql_ba6a7b8d1d",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 16.85,
+                                    "url": "/uploads/thumbnail_graph_ql_ba6a7b8d1d.png"
+                                }
+                            },
+                            "hash": "graph_ql_ba6a7b8d1d",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 6.64,
+                            "url": "/uploads/graph_ql_ba6a7b8d1d.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.932Z",
+                            "updatedAt": "2022-09-15T12:33:18.932Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 6,
+                            "attributes": {
+                                "name": "Other",
+                                "slug": "other",
+                                "createdAt": "2022-09-15T12:33:17.371Z",
+                                "updatedAt": "2022-10-05T19:39:43.590Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 7,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 8,
+            "attributes": {
+                "title": "C++",
+                "description": "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or \"C with Classes\"",
+                "price": 1.84,
+                "slug": "c-plus-plus",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:21.258Z",
+                "updatedAt": "2022-09-15T12:33:21.258Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 8,
+                        "attributes": {
+                            "name": "c-plus-plus",
+                            "alternativeText": "c-plus-plus",
+                            "caption": "c-plus-plus",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_c-plus-plus",
+                                    "hash": "thumbnail_c_plus_plus_ebb8a0a666",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 14.88,
+                                    "url": "/uploads/thumbnail_c_plus_plus_ebb8a0a666.png"
+                                }
+                            },
+                            "hash": "c_plus_plus_ebb8a0a666",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 4.82,
+                            "url": "/uploads/c_plus_plus_ebb8a0a666.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:18.987Z",
+                            "updatedAt": "2022-09-15T12:33:18.987Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 8,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 9,
+            "attributes": {
+                "title": "Laravel",
+                "description": "The PHP Framework For Web Artisans",
+                "price": 1.84,
+                "slug": "laravel",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:21.522Z",
+                "updatedAt": "2022-09-15T12:33:21.522Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 9,
+                        "attributes": {
+                            "name": "laravel",
+                            "alternativeText": "laravel",
+                            "caption": "laravel",
+                            "width": 400,
+                            "height": 400,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_laravel",
+                                    "hash": "thumbnail_laravel_f3130162fd",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 15.62,
+                                    "url": "/uploads/thumbnail_laravel_f3130162fd.png"
+                                }
+                            },
+                            "hash": "laravel_f3130162fd",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 5.05,
+                            "url": "/uploads/laravel_f3130162fd.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.037Z",
+                            "updatedAt": "2022-09-15T12:33:19.037Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 9,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 10,
+            "attributes": {
+                "title": "Google cloud",
+                "description": "Cloud Computing Services",
+                "price": 1.84,
+                "slug": "google-cloud",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:21.783Z",
+                "updatedAt": "2022-09-15T12:33:21.783Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 10,
+                        "attributes": {
+                            "name": "google-cloud",
+                            "alternativeText": "google-cloud",
+                            "caption": "google-cloud",
+                            "width": 400,
+                            "height": 400,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_google-cloud",
+                                    "hash": "thumbnail_google_cloud_f634bb19d8",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 13.18,
+                                    "url": "/uploads/thumbnail_google_cloud_f634bb19d8.png"
+                                }
+                            },
+                            "hash": "google_cloud_f634bb19d8",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 5.08,
+                            "url": "/uploads/google_cloud_f634bb19d8.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.089Z",
+                            "updatedAt": "2022-09-15T12:33:19.089Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 6,
+                            "attributes": {
+                                "name": "Other",
+                                "slug": "other",
+                                "createdAt": "2022-09-15T12:33:17.371Z",
+                                "updatedAt": "2022-10-05T19:39:43.590Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 10,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 11,
+            "attributes": {
+                "title": "MongoDB",
+                "description": "The most popular database for modern apps",
+                "price": 1.84,
+                "slug": "mongo-db",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:22.017Z",
+                "updatedAt": "2022-09-15T12:33:22.017Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 11,
+                        "attributes": {
+                            "name": "mongo-db",
+                            "alternativeText": "mongo-db",
+                            "caption": "mongo-db",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_mongo-db",
+                                    "hash": "thumbnail_mongo_db_7cd31827d0",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 14.75,
+                                    "url": "/uploads/thumbnail_mongo_db_7cd31827d0.png"
+                                }
+                            },
+                            "hash": "mongo_db_7cd31827d0",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 6.93,
+                            "url": "/uploads/mongo_db_7cd31827d0.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.138Z",
+                            "updatedAt": "2022-09-15T12:33:19.138Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 5,
+                            "attributes": {
+                                "name": "Database",
+                                "slug": "database",
+                                "createdAt": "2022-09-15T12:33:17.315Z",
+                                "updatedAt": "2022-10-05T19:30:58.161Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 11,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 12,
+            "attributes": {
+                "title": "Python",
+                "description": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
+                "price": 1.84,
+                "slug": "python",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:22.255Z",
+                "updatedAt": "2022-09-15T12:33:22.255Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 12,
+                        "attributes": {
+                            "name": "python",
+                            "alternativeText": "python",
+                            "caption": "python",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_python",
+                                    "hash": "thumbnail_python_4e5ec9595c",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 15.22,
+                                    "url": "/uploads/thumbnail_python_4e5ec9595c.png"
+                                }
+                            },
+                            "hash": "python_4e5ec9595c",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 5.99,
+                            "url": "/uploads/python_4e5ec9595c.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.188Z",
+                            "updatedAt": "2022-09-15T12:33:19.188Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 12,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 13,
+            "attributes": {
+                "title": "Golang",
+                "description": "Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.",
+                "price": 1.84,
+                "slug": "golang",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:22.579Z",
+                "updatedAt": "2022-09-15T12:33:22.579Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 13,
+                        "attributes": {
+                            "name": "golang",
+                            "alternativeText": "golang",
+                            "caption": "golang",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_golang",
+                                    "hash": "thumbnail_golang_7e965a1c7c",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 18.21,
+                                    "url": "/uploads/thumbnail_golang_7e965a1c7c.png"
+                                }
+                            },
+                            "hash": "golang_7e965a1c7c",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 9.34,
+                            "url": "/uploads/golang_7e965a1c7c.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.242Z",
+                            "updatedAt": "2022-09-15T12:33:19.242Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": []
+                },
+                "Custom_field": [
+                    {
+                        "id": 13,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 14,
+            "attributes": {
+                "title": "React",
+                "description": "A JavaScript library for building user interfaces",
+                "price": 1.84,
+                "slug": "react",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:22.818Z",
+                "updatedAt": "2022-09-15T12:33:22.818Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 14,
+                        "attributes": {
+                            "name": "react",
+                            "alternativeText": "react",
+                            "caption": "react",
+                            "width": 400,
+                            "height": 400,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_react",
+                                    "hash": "thumbnail_react_7641796c3c",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 20.3,
+                                    "url": "/uploads/thumbnail_react_7641796c3c.png"
+                                }
+                            },
+                            "hash": "react_7641796c3c",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 9.49,
+                            "url": "/uploads/react_7641796c3c.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.294Z",
+                            "updatedAt": "2022-09-15T12:33:19.294Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "name": "Front",
+                                "slug": "front",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T19:33:22.329Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 14,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 15,
+            "attributes": {
+                "title": "PHP",
+                "description": "Hypertext Preprocessor",
+                "price": 1.84,
+                "slug": "php",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:23.071Z",
+                "updatedAt": "2022-09-15T12:33:23.071Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 16,
+                        "attributes": {
+                            "name": "php",
+                            "alternativeText": "php",
+                            "caption": "php",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_php",
+                                    "hash": "thumbnail_php_2dad7ab359",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 25.13,
+                                    "url": "/uploads/thumbnail_php_2dad7ab359.png"
+                                }
+                            },
+                            "hash": "php_2dad7ab359",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 13.79,
+                            "url": "/uploads/php_2dad7ab359.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.404Z",
+                            "updatedAt": "2022-09-15T12:33:19.404Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 15,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 16,
+            "attributes": {
+                "title": "Ruby",
+                "description": "A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.",
+                "price": 1.84,
+                "slug": "ruby-1",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:23.348Z",
+                "updatedAt": "2022-09-15T12:33:23.348Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 15,
+                        "attributes": {
+                            "name": "ruby-1",
+                            "alternativeText": "ruby-1",
+                            "caption": "ruby-1",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_ruby-1",
+                                    "hash": "thumbnail_ruby_1_d95feb2fdf",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 31,
+                                    "url": "/uploads/thumbnail_ruby_1_d95feb2fdf.png"
+                                }
+                            },
+                            "hash": "ruby_1_d95feb2fdf",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 17.56,
+                            "url": "/uploads/ruby_1_d95feb2fdf.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.345Z",
+                            "updatedAt": "2022-09-15T12:33:19.345Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 16,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 17,
+            "attributes": {
+                "title": "Linux",
+                "description": "Linux is a family of open source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.",
+                "price": 1.84,
+                "slug": "linux",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:23.760Z",
+                "updatedAt": "2022-09-15T12:33:23.760Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 17,
+                        "attributes": {
+                            "name": "linux",
+                            "alternativeText": "linux",
+                            "caption": "linux",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_linux",
+                                    "hash": "thumbnail_linux_1172d8244f",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 20.12,
+                                    "url": "/uploads/thumbnail_linux_1172d8244f.png"
+                                }
+                            },
+                            "hash": "linux_1172d8244f",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 11.52,
+                            "url": "/uploads/linux_1172d8244f.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:19.460Z",
+                            "updatedAt": "2022-09-15T12:33:19.460Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "attributes": {
+                                "name": "Other",
+                                "slug": "other",
+                                "createdAt": "2022-09-15T12:33:17.371Z",
+                                "updatedAt": "2022-10-05T19:39:43.590Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 17,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 18,
+            "attributes": {
+                "title": "Kotlin",
+                "description": "A modern programming language that makes developers happier. Open source forever",
+                "price": 1.84,
+                "slug": "kotlin",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:24.026Z",
+                "updatedAt": "2022-09-15T12:33:24.026Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 18,
+                        "attributes": {
+                            "name": "kotlin",
+                            "alternativeText": "kotlin",
+                            "caption": "kotlin",
+                            "width": 400,
+                            "height": 400,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_kotlin",
+                                    "hash": "thumbnail_kotlin_efd1fb2113",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 12.64,
+                                    "url": "/uploads/thumbnail_kotlin_efd1fb2113.png"
+                                }
+                            },
+                            "hash": "kotlin_efd1fb2113",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 7.98,
+                            "url": "/uploads/kotlin_efd1fb2113.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:22.428Z",
+                            "updatedAt": "2022-09-15T12:33:22.428Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": []
+                },
+                "Custom_field": [
+                    {
+                        "id": 18,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 19,
+            "attributes": {
+                "title": "Java",
+                "description": "Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.",
+                "price": 1.84,
+                "slug": "java",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:24.278Z",
+                "updatedAt": "2022-09-15T12:33:24.278Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 19,
+                        "attributes": {
+                            "name": "java",
+                            "alternativeText": "java",
+                            "caption": "java",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_java",
+                                    "hash": "thumbnail_java_9b0ce56d6d",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 16.09,
+                                    "url": "/uploads/thumbnail_java_9b0ce56d6d.png"
+                                }
+                            },
+                            "hash": "java_9b0ce56d6d",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 6.45,
+                            "url": "/uploads/java_9b0ce56d6d.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:22.481Z",
+                            "updatedAt": "2022-09-15T12:33:22.481Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 19,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 20,
+            "attributes": {
+                "title": "Angular",
+                "description": "One framework. Mobile & desktop.",
+                "price": 1.84,
+                "slug": "angular",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:24.582Z",
+                "updatedAt": "2022-09-15T12:33:24.582Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 20,
+                        "attributes": {
+                            "name": "angular",
+                            "alternativeText": "angular",
+                            "caption": "angular",
+                            "width": 375,
+                            "height": 375,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_angular",
+                                    "hash": "thumbnail_angular_2de6ba59d3",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 17.97,
+                                    "url": "/uploads/thumbnail_angular_2de6ba59d3.png"
+                                }
+                            },
+                            "hash": "angular_2de6ba59d3",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 7,
+                            "url": "/uploads/angular_2de6ba59d3.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:23.630Z",
+                            "updatedAt": "2022-09-15T12:33:23.630Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "name": "Front",
+                                "slug": "front",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T19:33:22.329Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 20,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 21,
+            "attributes": {
+                "title": "Next.js",
+                "description": "The React Framework",
+                "price": 1.84,
+                "slug": "next-js",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:24.881Z",
+                "updatedAt": "2022-09-15T12:33:24.881Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 21,
+                        "attributes": {
+                            "name": "next-js",
+                            "alternativeText": "next-js",
+                            "caption": "next-js",
+                            "width": 600,
+                            "height": 600,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_next-js",
+                                    "hash": "thumbnail_next_js_08962a3500",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 9.2,
+                                    "url": "/uploads/thumbnail_next_js_08962a3500.png"
+                                },
+                                "small": {
+                                    "name": "small_next-js",
+                                    "hash": "small_next_js_08962a3500",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 500,
+                                    "size": 44.3,
+                                    "url": "/uploads/small_next_js_08962a3500.png"
+                                }
+                            },
+                            "hash": "next_js_08962a3500",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 13.28,
+                            "url": "/uploads/next_js_08962a3500.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:24.479Z",
+                            "updatedAt": "2022-09-15T12:33:24.479Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "name": "Front",
+                                "slug": "front",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T19:33:22.329Z",
+                                "locale": "en"
+                            }
+                        },
+                        {
+                            "id": 3,
+                            "attributes": {
+                                "name": "SSG",
+                                "slug": "ssg",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T20:06:01.827Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 21,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 22,
+            "attributes": {
+                "title": "npm",
+                "description": "Build amazing things",
+                "price": 1.84,
+                "slug": "npm",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:25.125Z",
+                "updatedAt": "2022-09-15T12:33:25.125Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 22,
+                        "attributes": {
+                            "name": "npm",
+                            "alternativeText": "npm",
+                            "caption": "npm",
+                            "width": 600,
+                            "height": 600,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_npm",
+                                    "hash": "thumbnail_npm_f635ab794f",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 5.02,
+                                    "url": "/uploads/thumbnail_npm_f635ab794f.png"
+                                },
+                                "small": {
+                                    "name": "small_npm",
+                                    "hash": "small_npm_f635ab794f",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 500,
+                                    "size": 26.27,
+                                    "url": "/uploads/small_npm_f635ab794f.png"
+                                }
+                            },
+                            "hash": "npm_f635ab794f",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 7.14,
+                            "url": "/uploads/npm_f635ab794f.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:24.772Z",
+                            "updatedAt": "2022-09-15T12:33:24.772Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 6,
+                            "attributes": {
+                                "name": "Other",
+                                "slug": "other",
+                                "createdAt": "2022-09-15T12:33:17.371Z",
+                                "updatedAt": "2022-10-05T19:39:43.590Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 22,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 23,
+            "attributes": {
+                "title": "Strapi",
+                "description": "Design APIs fast, manage content easily.",
+                "price": 1.84,
+                "slug": "strapi",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:25.420Z",
+                "updatedAt": "2022-09-15T12:33:25.420Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 23,
+                        "attributes": {
+                            "name": "strapi",
+                            "alternativeText": "strapi",
+                            "caption": "strapi",
+                            "width": 600,
+                            "height": 600,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_strapi",
+                                    "hash": "thumbnail_strapi_a7a78e5f47",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 8.8,
+                                    "url": "/uploads/thumbnail_strapi_a7a78e5f47.png"
+                                },
+                                "small": {
+                                    "name": "small_strapi",
+                                    "hash": "small_strapi_a7a78e5f47",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 500,
+                                    "size": 32.88,
+                                    "url": "/uploads/small_strapi_a7a78e5f47.png"
+                                }
+                            },
+                            "hash": "strapi_a7a78e5f47",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 5.12,
+                            "url": "/uploads/strapi_a7a78e5f47.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:25.303Z",
+                            "updatedAt": "2022-09-15T12:33:25.303Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Back",
+                                "slug": "back",
+                                "createdAt": "2022-09-15T12:33:17.313Z",
+                                "updatedAt": "2022-10-05T19:34:57.075Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 23,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 24,
+            "attributes": {
+                "title": "Nuxt.js",
+                "description": "The Intuitive Vue Framework",
+                "price": 1.84,
+                "slug": "nuxt-js",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:25.759Z",
+                "updatedAt": "2022-09-15T12:33:25.759Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 24,
+                        "attributes": {
+                            "name": "nuxt-js",
+                            "alternativeText": "nuxt-js",
+                            "caption": "nuxt-js",
+                            "width": 600,
+                            "height": 600,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_nuxt-js",
+                                    "hash": "thumbnail_nuxt_js_e40d96ff50",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 16.05,
+                                    "url": "/uploads/thumbnail_nuxt_js_e40d96ff50.png"
+                                },
+                                "small": {
+                                    "name": "small_nuxt-js",
+                                    "hash": "small_nuxt_js_e40d96ff50",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 500,
+                                    "size": 105.67,
+                                    "url": "/uploads/small_nuxt_js_e40d96ff50.png"
+                                }
+                            },
+                            "hash": "nuxt_js_e40d96ff50",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 29.79,
+                            "url": "/uploads/nuxt_js_e40d96ff50.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:25.611Z",
+                            "updatedAt": "2022-09-15T12:33:25.611Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "name": "Front",
+                                "slug": "front",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T19:33:22.329Z",
+                                "locale": "en"
+                            }
+                        },
+                        {
+                            "id": 3,
+                            "attributes": {
+                                "name": "SSG",
+                                "slug": "ssg",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T20:06:01.827Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 24,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "id": 25,
+            "attributes": {
+                "title": "Gatsby",
+                "description": "Blazing fast modern site generator for React. Go beyond static sites: build blogs, e-commerce sites, full-blown apps, and more with Gatsby.",
+                "price": 1.84,
+                "slug": "gatsby",
+                "status": "published",
+                "createdAt": "2022-09-15T12:33:25.987Z",
+                "updatedAt": "2022-09-15T12:33:25.987Z",
+                "locale": "en",
+                "image": {
+                    "data": {
+                        "id": 25,
+                        "attributes": {
+                            "name": "gatsby",
+                            "alternativeText": "gatsby",
+                            "caption": "gatsby",
+                            "width": 600,
+                            "height": 600,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_gatsby",
+                                    "hash": "thumbnail_gatsby_2b7ee64c0b",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 156,
+                                    "height": 156,
+                                    "size": 21.61,
+                                    "url": "/uploads/thumbnail_gatsby_2b7ee64c0b.png"
+                                },
+                                "small": {
+                                    "name": "small_gatsby",
+                                    "hash": "small_gatsby_2b7ee64c0b",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 500,
+                                    "size": 138.39,
+                                    "url": "/uploads/small_gatsby_2b7ee64c0b.png"
+                                }
+                            },
+                            "hash": "gatsby_2b7ee64c0b",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 32.75,
+                            "url": "/uploads/gatsby_2b7ee64c0b.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-09-15T12:33:25.661Z",
+                            "updatedAt": "2022-09-15T12:33:25.661Z"
+                        }
+                    }
+                },
+                "categories": {
+                    "data": [
+                        {
+                            "id": 2,
+                            "attributes": {
+                                "name": "Front",
+                                "slug": "front",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T19:33:22.329Z",
+                                "locale": "en"
+                            }
+                        },
+                        {
+                            "id": 3,
+                            "attributes": {
+                                "name": "SSG",
+                                "slug": "ssg",
+                                "createdAt": "2022-09-15T12:33:17.314Z",
+                                "updatedAt": "2022-10-05T20:06:01.827Z",
+                                "locale": "en"
+                            }
+                        }
+                    ]
+                },
+                "Custom_field": [
+                    {
+                        "id": 25,
+                        "title": "Select the size of your sticker",
+                        "required": true,
+                        "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+                    }
+                ],
+                "localizations": {
+                    "data": []
+                }
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 2,
+            "total": 27
+        }
+    }
+}
