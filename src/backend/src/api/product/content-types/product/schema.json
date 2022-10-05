@@ -5,30 +5,58 @@
     "singularName": "product",
     "pluralName": "products",
     "displayName": "Product",
-    "name": "product"
+    "name": "product",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
   },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "description": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "price": {
-      "type": "float"
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "slug": {
       "type": "uid",
@@ -43,7 +71,12 @@
     "Custom_field": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.custom-field"
+      "component": "custom.custom-field",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "status": {
       "type": "enumeration",
@@ -52,7 +85,12 @@
         "published"
       ],
       "default": "published",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
