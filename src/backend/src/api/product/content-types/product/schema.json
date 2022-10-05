@@ -38,7 +38,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "inversedBy": "products"
+      "mappedBy": "products"
     },
     "Custom_field": {
       "type": "component",
