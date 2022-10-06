@@ -465,7 +465,7 @@ This ensures the remote Strapi schema will be merged into the Gatsby application
 
 Using GraphQL editor for your Gatsby application at [http://localhost:8000/___graphql](http://localhost:8000/___graphql), test the GraphQL Query in the image below that you would make from the gatsby application to retrieve data from your Strapi Application.
 
-![Gatsby GraphQL Playground](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621109421026_strapi-gatsby-graphql.png)
+![Gatsby GraphiQL Playground](https://www.dropbox.com/s/9skzydypvedupio/gatsby-graphql-playground-tinyp.png?raw=1)
 
 
 In the GraphiQL playground above, you can observe the result of the `getData` query executed to retrieve data from your running Strapi application. Also, the GraphiQL playground shows the Strapi fields that have been merged in the Gatsby application schema.
