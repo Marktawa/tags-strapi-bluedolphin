@@ -18,7 +18,7 @@ module.exports = {
             typeName: "STRAPI",
             // Field for remote schema. You'll use this in your Gatsby query
             fieldName: "strapi",
-            url: `${process.env.GATSBY_STRAPI_GRAPHQL_ENDPOINT}/graphql`,
+            url: `http://localhost:1337/graphql`,
         },
     },
   ],
