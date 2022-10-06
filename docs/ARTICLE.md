@@ -222,20 +222,25 @@ We will create `French (fr)` locale entries for the **Category** and **Product**
 - Navigate to the **Content Manager** page
 - Select **Product** under **COLLECTION TYPES** 
 - Click on the first entry, e.g. **Rust** to edit it.
+
 ![Select Product to add Locale content](https://www.dropbox.com/s/czsw9ds40oy4mdf/add-locale-content-for-product-tinyp.png?raw=1)
+
 - In the **Edit Product** menu go to the **INTERNATIONALIZATION** section on the right hand side.
 - Click on the **Locales** drop-down and select **French (fr)**.
 - In the **INTERNATIONALIZATION** section click on **Fill in fron another locale** and confirm by selecting **Yes, fill in** to automatically update your entry with the data from the `English (en)` locale.
 - Append the **slug** string with `-fr` so that `rust` becomes `rust-fr`.
 - Translate the **description** for the product entry into `French (fr)`.
 - Click on **Save**.
+
 ![Localized Product](https://www.dropbox.com/s/rdhsupe90za8r0s/create-french-locale-product-entry-tinyp.png?raw=1)
+
 - Using the same procedure, add `French (fr)` locale content entries for the remaining products.
 - Next, create `French (fr)` locale entries for the **Category** collection.
-- Link the products to their respective categories using the **products** drop-down in the **RELATION** section.
+- Link the products to their respective categories using the **products** drop-down in the **RELATION** section then **Save**.
 - On completion, you should have a `French (fr)` collection of **Categories** with the linked **products**.
 - Navigate to the **Category** collection-type page to see a list of all categories created in the default English (en) locale.
 - Click the **locale** dropdown at the top-right to switch from the default `English (en)` locale to the recently created `French (fr)` locale.
+
 ![French (fr) locale Category collection](https://www.dropbox.com/s/513izxg0lx1lgl0/french-locale-category-collection-tinyp.png?raw=1)
 
 The Strapi backend to your application is now set.
