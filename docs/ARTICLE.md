@@ -14,19 +14,18 @@
 - Step 4: Add A New Locale
 - Step 5: Enable Content-Type Localization
 - Step 6: Add Locale Content
-- Step 7: Test API
 ---
 - **Frontend Setup**
-- Step 8: Install Gatsby
-- Step 9: Add a Wrapper
-- Step 10: Add Styling
-- Step 11: Configure Gatsby dependencies
-- Step 12: Test GraphQL
-- Step 13: Fetch data from Strapi API
-- Step 14: Add Products Page
-- Step 15: Add Home Page
+- Step 7: Install Gatsby
+- Step 8: Add a Wrapper
+- Step 9: Add Styling
+- Step 10: Configure Gatsby dependencies
+- Step 11: Test GraphQL
+- Step 12: Fetch data from Strapi API
+- Step 13: Add Products Page
+- Step 14: Add Home Page
 ---
-- Step 16: Test App
+- Step 15: Test App
 - Conclusion
 
 With the vast number of languages spoken by users worldwide in different regions, an application's ability to serve content to users in their locales gradually becomes a needed functionality for better user engagement and retention.
@@ -140,6 +139,8 @@ The Ecommerce template you just cloned contains the following:
 - Entries (sample data) for the collection types above
 - Media assets
 
+To view the entries for each collection type select **Content Manager** from the left hand side menu of your dashboard. You can also see the media assets by clicking on the **Media Library** under **PLUGINS**.  
+
 ![Strapi Dashboard](https://www.dropbox.com/s/me3vnd26jcap3hn/strapi-dashboard-for-ecommerce-template-tinypng.png?raw=1)
 
 Feel free to modify the existing data. They provide a good starting point for building this project.
@@ -170,24 +171,32 @@ Rather than automatically translate delivered content, the i18n plugin allows de
 
 >**Note**:
 > 
->*The i18n plugin ships by default with Strapi applications running on version 4.x.x. Please refer to the* [*installation*](https://docs.strapi.io/developer-docs/latest/plugins/i18n.html#installation) *section of the plugin documentation*.
+>*The i18n plugin ships by default with Strapi applications running on version 4.x.x. Please refer to the* [***installation***](https://docs.strapi.io/developer-docs/latest/plugins/i18n.html#installation) *section of the plugin documentation*.
 
-By default, the i18n plugin has `en` ( English ) as the default locale. However, more locales and their respective content can be added either using the Admin panel or the Strapi Content API.
+By default, the i18n plugin has `English (en)` as the default locale. However, more locales and their respective content can be added either using the Admin panel or the Strapi Content API.
 
 We will add one more locale to the **Categories** content-type.
 
-Using the [Admin panel](https://docs.strapi.io/developer-docs/latest/development/admin-customization.html), navigate to **the Settings** page of your Strapi application, then click on the **Internationalization** option within the **Global Settings**.
+Using the [Admin panel](https://docs.strapi.io/developer-docs/latest/development/admin-customization.html), navigate to the **Settings** page of your Strapi application, then click on the **Internationalization** option within the **Global Settings**.
 
 ![Internationalization Settings](https://www.dropbox.com/s/8g4kyhjaevwdful/internationalization-settings-tinyp.png?raw=1)
 
 # Step 4: Add A New Locale
 
-- Locate and click the **Add a Locale** button at the top right corner to open the locale modal. 
-- Using the locales dropdown, select a new locale, select a display name, or leave the default locale name.
+- Locate and click the **+ Add new locale** button at the top right corner to open the **Add new locale** modal. 
+- Using the **Locales** dropdown, select a new locale.
 
-For this guide, use the `fr` locale with a default display name of French as shown below;
+>**Note:**
+>
+>*This tutorial will be using the `French (fr)` locale. You can however use any other locale if you prefer.*
 
-![Locale Configuration](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621048491412_locale-configuration.png)
+- Select `French (fr)` in the **Locales** drop-down and the **Locale display name** will be automatically updated to `French (fr)`.
+- Click on **✓ Save**.
+
+
+![Locale Configuration](https://www.dropbox.com/s/e3uzippqmql4kug/add-new-locale-tinyp.png?raw=1)
+
+If you successfully added the `French (fr)` locale you should see it listed under `English (en)` in the list of locales.
 
 
 # Step 5: Enable Content-Type Localization
@@ -195,43 +204,45 @@ For this guide, use the `fr` locale with a default display name of French as sho
 By default, the content types within the cloned eCommerce template do not have localization enabled. 
 
 - Click on **Content-Types Builder** in your Strapi dashboard.
-- Select the content type to be localized.
-- Click the edit pencil icon of the chosen content type to open the edit icon.
+- Select the content type to be localized. Start with the **Category** content-type.
+- Click the edit pencil icon of the chosen content type to open the **Edit Category** modal.
 - From the edit modal, click the **Advanced Settings** tab, then enable localization using the checkbox at the bottom of the modal.
+- Click on **Finish** and wait for your Strapi server to restart.
+- Next, enable localization for the **Product** content-type.
 
-![Enable Localization](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621051131371_enable-localization.png)
+![Enable Localization for the Content-Type](https://www.dropbox.com/s/u0f8nvlp3p6kla7/enable-localization-for-content-type-tinyp.png?raw=1)
 
 
 # Step 6: Add Locale Content
 
 As stated earlier, the i18n plugin does not automatically translate content stored with Strapi into different locales; instead, it gives admins the feature to store and deliver multiple locale entries.
 
-We will only create one new product for this guide and link it to an existing category to work with the i18n plugin. This should be enough to give you a working idea when implementing Internationalization with the i18n plugin in your application.
+We will create `French (fr)` locale entries for the **Category** and **Product** collection types then link the products to their respective categories to work with the i18n plugin. This should be enough to give you a working idea when implementing Internationalization with the i18n plugin in your application.
 
-- Navigate to the **Products** content-type page and click the **Add New Products** button to create a new product.
-- Enter a localized **title**, **price**, **description**, and any **image** to represent this product. You can use a translation service like [Google Translate](https://paper.dropbox.com/ep/redirect/external-link?url=https%3A%2F%2Ftranslate.google.com%2F&hmac=MgEmKwxEZ8ok6K0i9io0Mwd7qwo370LwHr%2FDA8NNFHM%3D) to translate the content.
-- Within the **Internationalization** section in the box positioned at the right, click the **locales** dropdown to select the newly created `fr` (French) locale.
-- Click on **Save** to save this new category.
+- Navigate to the **Content Manager** page
+- Select **Product** under **COLLECTION TYPES** 
+- Click on the first entry, e.g. **Rust** to edit it.
+![Select Product to add Locale content](https://www.dropbox.com/s/czsw9ds40oy4mdf/add-locale-content-for-product-tinyp.png?raw=1)
+- In the **Edit Product** menu go to the **INTERNATIONALIZATION** section on the right hand side.
+- Click on the **Locales** drop-down and select **French (fr)**.
+- In the **INTERNATIONALIZATION** section click on **Fill in fron another locale** and confirm by selecting **Yes, fill in** to automatically update your entry with the data from the `English (en)` locale.
+- Append the **slug** string with `-fr` so that `rust` becomes `rust-fr`.
+- Translate the **description** for the product entry into `French (fr)`.
+- Click on **Save**.
+![Localized Product](https://www.dropbox.com/s/rdhsupe90za8r0s/create-french-locale-product-entry-tinyp.png?raw=1)
+- Using the same procedure, add `French (fr)` locale content entries for the remaining products.
+- Next, create `French (fr)` locale entries for the **Category** collection.
+- Link the products to their respective categories using the **products** drop-down in the **RELATION** section.
+- On completion, you should have a `French (fr)` collection of **Categories** with the linked **products**.
+- Navigate to the **Category** collection-type page to see a list of all categories created in the default English (en) locale.
+- Click the **locale** dropdown at the top-right to switch from the default `English (en)` locale to the recently created `French (fr)` locale.
+![French (fr) locale Category collection](https://www.dropbox.com/s/513izxg0lx1lgl0/french-locale-category-collection-tinyp.png?raw=1)
 
-![Localized Products](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621055552167_localized-product.png)
-
-Next link this product with the previously created category.
-
-- Navigate to the **Categories** collection-type page to see a list of all categories created in the default English (en) locale.
-- Click the **locale** dropdown at the right to switch from the default English (`en`) locale to the recently created French (`fr`) locale. 
-- Select the **base de données** category in `fr` locale that was created.
-- From the products list positioned at the bottom right of the category page, select the "**base de données relationnelle**" as a product to link the category.
-- Click on **Save** to save the new category.
-
-The Strapi application has been fully set up with the i18n plugin, as we have created a new French ( fr ) locale, added a new category in this locale, and linked a product to the category.
-
-# Step 7: Test the API
-
-You can now fetch localized content from your Strapi application using the Strapi GraphQL content API.
+The Strapi backend to your application is now set.
 
 # Frontend Setup
 
-# Step 8: Install Gatsby 
+# Step 7: Install Gatsby 
 
 Now that the backend is set, open up a new terminal and navigate to the root of your project folder `bluedolphin`.
 
@@ -251,7 +262,7 @@ After the installation process is completed, you run the development server of t
 /bluedolphin $ cd frontend
 ```
 
-# Step 9: Add a Wrapper
+# Step 8: Add a Wrapper
 
 Create a `components` folder within the `src` directory.
 ```bash
@@ -288,7 +299,7 @@ export default Layout;
 ```
 The code above creates a wrapper using React-helmet to wrap each page with styles from [Bootstrap](https://getbootstrap.com/docs/3.3/getting-started/) using a CDN link.
 
-# Step 10: Add Styling
+# Step 9: Add Styling
 
 Create a `styles.js` file in the `src` directory. 
 
@@ -377,7 +388,7 @@ export const Container = styled.div`
 
 The styles exported in the file above would be used when creating other components.
 
-# Step 11: Configure Gatsby dependencies
+# Step 10: Configure Gatsby dependencies
 
 Install the following extra dependencies needed for this Gatsby application;
 
@@ -445,7 +456,7 @@ Next, restart the Gatsby development server. Press `Ctrl` plus `C` on your keybo
 
 This ensures the remote Strapi schema will be merged into the Gatsby application schema.
 
-# Step 12: Test GraphQL
+# Step 11: Test GraphQL
 
 Using GraphQL editor for your Gatsby application at [http://localhost:8000/___graphql](http://localhost:8000/___graphql), test the GraphQL Query in the image below that you would make from the gatsby application to retrieve data from your Strapi Application.
 
@@ -456,7 +467,7 @@ In the GraphiQL playground above, you can observe the result of the `getData` qu
 
 Now that the Strapi Schema has been merged with your Gatsby application schema, you can perform GraphQL operations directly from the application.
 
-# Step 13: Fetch data from Strapi API
+# Step 12: Fetch data from Strapi API
 
 Create a `gatsby-node.js` file in the root folder of the gatsby application. 
 
@@ -550,7 +561,7 @@ If a collection type has localized content in our use case, a new dynamic page i
 
 Before we restart the Gatsby development server for the new changes in the `gatsby-node.js` file to take effect we will create the `product` template and a `home` page to display all categories.
 
-# Step 14: Add Products Page
+# Step 13: Add Products Page
 
 Create a `products.js` file in the `src/pages` directory.
 
@@ -680,7 +691,7 @@ For example, clicking the `fr` link would display products in the French locale 
 
 Above, we can see the recently created product with the backend category displayed in the `fr` locale.
 
-# Step 15: Add Home Page
+# Step 14: Add Home Page
 
 Next, create a home page that loads all categories with links to their respective products.
 
@@ -801,7 +812,7 @@ Restart your server for the changes to take effect:
 /bluedolphin/frontend $ yarn start
 ```
 
-# Step 16: Test App
+# Step 15: Test App
 
 Navigate to your Gatsby application's homepage, [http://localhost:8000](http://localhost:8000). If it is working correctly, you should see the categories fetched from your Strapi application.
 
