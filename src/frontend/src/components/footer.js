@@ -7,7 +7,7 @@ const Footer = styled.footer`
   height: 55px;
   background-color: #1a124b;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   color: white;
   display: flex;
