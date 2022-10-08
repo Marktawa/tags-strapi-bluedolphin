@@ -77,3 +77,39 @@ Thanks! Here's what we'll now do:
 #
 
 ```
+
+## Get images GraphQL
+
+```js
+<Image
+  src={
+    `http://localhost:1337/${product.attributes.image.data.attributes.url}`
+  }
+/>
+
+<Cards>
+  {categories.data[id].attributes.products.data.map(( product ) => (
+      <Item key={product.id}>
+          <div>
+            <Image
+              src={
+                  `http://localhost:1337/${product.attributes.image.data.attributes.url}`
+              }
+            />
+            <h5> {product.attributes.title} </h5>
+            <p style={{ opacity: ".8" }} >{shrinkText(product.attributes.description, 4)} </p>
+
+            <Flex direction="row" justify="space-between">
+                <div>
+                    <p style={{ textAlign: "left" }}> ${product.attributes.price} </p>
+                </div>
+
+                <div>
+                    <Button>Buy Now</Button>
+                </div>
+            </Flex>
+          </div>
+      </Item>
+  ))}
+</Cards>
+```
