@@ -24,6 +24,7 @@ exports.createPages = async ({ graphql, actions }) => {
                         }
                         products {
                             data {
+                                id
                                 attributes {
                                     locale
                                     title
@@ -33,6 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                     image {
                                         data {
                                             attributes {
+                                                url
                                                 provider
                                                 width
                                             }
@@ -77,26 +79,40 @@ exports.createPages = async ({ graphql, actions }) => {
     );*/
 
     productsQuery.data.strapi.categories.data.forEach(
-        ({ title, id, products, price, slug, name, localizations, locale  }) => {
-            if (localizations.data.length > 0) {
-                localizations.data.forEach((data) => {
-                    data.attributes.locale
+        (category) => {
+            if (category.attributes.localizations.data.length > 0) {
+                category.attributes.localizations.data.forEach((localization) => {
+                    localization.attributes.locale
                     return createPage({
-                        path: `product/${id}/${data.attributes.locale.toLowerCase()}`,
+                        path: `product/${category.id}/${localization.attributes.locale.toLowerCase()}`,
                         component: productsTemplate,
                         context: {
-                            slug, name, title,
-                            id, price, products, locale: data.attributes.locale,
-                            localizations
+                            slug: category.attributes.slug, 
+                            name: category.attributes.name, 
+                            title: category.attributes.title,
+                            id: category.id, 
+                            price: category.attributes.price, 
+                            products: category.attributes.products, 
+                            locale: localization.attributes.locale,
+                            localizations: category.attributes.localizations
                         },
                     })
                 })
             }
 
             return createPage({
-                path: `product/${id}/${locale}`,
+                path: `product/${category.id}/${category.attributes.locale}`,
                 component: productsTemplate,
-                context: { slug, name, title, id, price, products, locale, localizations }
+                context: { 
+                    slug: category.attributes.slug, 
+                    name: category.attributes.name, 
+                    title: category.attributes.title,
+                    id: category.id, 
+                    price: category.attributes.price, 
+                    products: category.attributes.products, 
+                    locale: category.attributes.locale,
+                    localizations: category.attributes.localizations 
+                },
             })
         }
     );
