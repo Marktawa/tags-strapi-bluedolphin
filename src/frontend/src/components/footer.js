@@ -23,7 +23,7 @@ const FooterComponent = (props) => (
   <Footer>
     <h5>
       {" "}
-      Designed and built by{" "}
+      {props.info}{" "}
       <a href="https://github.com/Marktawa"> Mark Munyaka </a>{" "}
     </h5>
   </Footer>

@@ -34,7 +34,7 @@ const HeaderComponent = (props) => (
       </div>
 
       <div>
-        <p> About </p>
+        <p>{props.about}</p>
       </div>
     </nav>
   </Header>

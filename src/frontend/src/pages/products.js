@@ -25,16 +25,16 @@ const Index = ({ pageContext, data }) => {
 
     return (
         <Layout>
-            <Header />
+            <Header about={categories.data[0].attributes.locale === "fr" ? "À propos" : "About" } />
             <Container>
                 <Banner>
                     <br />
-                    <h4 style={{ textAlign: "center" }}>{name}</h4>
+                    <h4 style={{ textAlign: "center" }}>{name} ({categories.data[0].attributes.locale === "fr" ? "Français" : "English"})</h4>
 
-                    <p> Display products in:
+                    <p>{categories.data[0].attributes.locale === "fr" ? " Afficher les produits en:" : " Display products in:"}
                         {categories.data[0].attributes.localizations.data.map((localization) =>
                             <Link to={`/product/${id}/${localization.attributes.locale.toLowerCase()}`} >
-                                <span style={{ padding: "0.5rem" }} > {localization.attributes.locale} </span>
+                                <span style={{ padding: "0.5rem" }} > {localization.attributes.locale === "fr" ? "French" : "Anglais"} </span>
                             </Link>
                         )}
                     </p>
@@ -42,31 +42,33 @@ const Index = ({ pageContext, data }) => {
                 <hr />
 
                 <Cards>
-                {categories.data[id-1].attributes.products.data.map(( product ) => (
-                            <Item key={product.id}>
-                                <div>
-                                    <Image
-                                        src={
-                                            `http://localhost:1337${product.attributes.image.data.attributes.url}`
-                                        }
-                                    />
-                                    <h5> {product.attributes.title} </h5>
-                                    <p style={{ opacity: ".8" }} >{shrinkText(product.attributes.description, 4)} </p>
+                    {categories.data[id - 1].attributes.products.data.map((product) => (
+                        <Item key={product.id}>
+                            <div>
+                                <Image
+                                    src={
+                                        `http://localhost:1337${product.attributes.image.data.attributes.url}`
+                                    }
+                                />
+                                <h5> {product.attributes.title} </h5>
+                                <p style={{ opacity: ".8" }} >{shrinkText(product.attributes.description, 4)} </p>
 
-                                    <Flex direction="row" justify="space-between">
-                                        <div>
-                                            <p style={{ textAlign: "left" }}> ${product.attributes.price} </p>
-                                        </div>
+                                <Flex direction="row" justify="space-between">
+                                    <div>
+                                        <p style={{ textAlign: "left" }}>
+                                            {categories.data[0].attributes.locale === "fr" ? ` € ${product.attributes.price}` : ` $ ${product.attributes.price}`}
+                                        </p>
+                                    </div>
 
-                                        <div>
-                                            <Button>Buy Now</Button>
-                                        </div>
-                                    </Flex>
-                                </div>
-                            </Item>
-                        ))}
+                                    <div>
+                                        <Button>{categories.data[0].attributes.locale === "fr" ? "Acheter Maintenant" : "Buy Now"}</Button>
+                                    </div>
+                                </Flex>
+                            </div>
+                        </Item>
+                    ))}
                 </Cards>
-                <Footer />
+                <Footer info={categories.data[0].attributes.locale === "fr" ? "Conçu et Construit par" : "Designed and Built by" } />
             </Container>
         </Layout>
     );

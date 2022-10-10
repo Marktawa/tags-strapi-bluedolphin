@@ -1,0 +1,72 @@
+{
+    "data": [
+        {
+            "id": 7,
+            "attributes": {
+                "name": "Back",
+                "slug": "back-fr",
+                "createdAt": "2022-10-06T14:11:22.694Z",
+                "updatedAt": "2022-10-06T14:13:03.191Z",
+                "locale": "fr"
+            }
+        },
+        {
+            "id": 8,
+            "attributes": {
+                "name": "Front",
+                "slug": "front-fr",
+                "createdAt": "2022-10-06T14:15:36.447Z",
+                "updatedAt": "2022-10-06T14:15:36.447Z",
+                "locale": "fr"
+            }
+        },
+        {
+            "id": 9,
+            "attributes": {
+                "name": "SSG",
+                "slug": "ssg-fr",
+                "createdAt": "2022-10-06T14:16:09.698Z",
+                "updatedAt": "2022-10-06T14:16:09.698Z",
+                "locale": "fr"
+            }
+        },
+        {
+            "id": 10,
+            "attributes": {
+                "name": "Container",
+                "slug": "container-fr",
+                "createdAt": "2022-10-06T14:17:20.747Z",
+                "updatedAt": "2022-10-06T14:17:20.747Z",
+                "locale": "fr"
+            }
+        },
+        {
+            "id": 11,
+            "attributes": {
+                "name": "Database",
+                "slug": "database-fr",
+                "createdAt": "2022-10-06T14:18:12.515Z",
+                "updatedAt": "2022-10-06T14:18:12.515Z",
+                "locale": "fr"
+            }
+        },
+        {
+            "id": 12,
+            "attributes": {
+                "name": "Other",
+                "slug": "other-fr",
+                "createdAt": "2022-10-06T14:19:37.488Z",
+                "updatedAt": "2022-10-06T14:19:37.488Z",
+                "locale": "fr"
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 6
+        }
+    }
+}

@@ -113,3 +113,48 @@ Thanks! Here's what we'll now do:
   ))}
 </Cards>
 ```
+
+### Localize price and "Buy Now"
+
+```js
+<div>
+      {if (categories.data[0].attributes.locale === "fr")
+        <p style={{ textAlign: "left" }}>€ {product.attributes.price}</p>
+      else
+        <p style={{ textAlign: "left" }}>$ {product.attributes.price}</p>
+      }
+</div>
+```
+
+Using ternary operator
+```js
+<div>
+  <p style={{ textAlign: "left" }}>
+    {categories.data[0].attributes.locale === "fr" ? `€ ${product.attributes.price}` : `$ ${product.attributes.price}`}    
+  </p>
+</div>
+```
+
+```js
+<Button>{categories.data[0].attributes.locale === "fr" ? "Acheter Maintenant" : "Buy Now"}</Button>
+```
+
+```js
+<p>{categories.data[0].attributes.locale === "fr" ? " Afficher les produits en:" : " Display products in:"}</p>
+```
+
+```js
+<Header about={categories.data[0].attributes.locale === "fr" ? "À propos" : "About" } />
+```
+
+```js
+<h4>({categories.data[0].attributes.locale === "fr" ? "Français" : "English"})</h4>
+```
+
+```js
+<span>{localization.attributes.locale === "fr" ? "Français" : "English"}</span>
+```
+
+```js
+<Footer info={categories.data[0].attributes.locale === "fr" ? "Conçu et Construit par" : "Designed and Built by" } />
+```
