@@ -1,4 +1,4 @@
-// ./src/pages/products.js
+// ./src/pages/categories.js
 
 import React, { useState } from "react";
 import { Cards, Item, Button, Image, Flex, Banner, Container } from "../styles";
@@ -33,7 +33,7 @@ const Index = ({ pageContext, data }) => {
 
                     <p>{categories.data[0].attributes.locale === "fr" ? " Afficher les produits en:" : " Display products in:"}
                         {categories.data[0].attributes.localizations.data.map((localization) =>
-                            <Link to={`/product/${id}/${localization.attributes.locale.toLowerCase()}`} >
+                            <Link to={`/category/${id}/${localization.attributes.locale.toLowerCase()}`} >
                                 <span style={{ padding: "0.5rem" }} > {localization.attributes.locale === "fr" ? "French" : "Anglais"} </span>
                             </Link>
                         )}
@@ -91,7 +91,7 @@ export const query = graphql`
                                 }
                             }
                         }
-                        products {
+                        products(sort: "id", pagination: {pageSize: 20}) {
                             data {
                                 id
                                 attributes {
