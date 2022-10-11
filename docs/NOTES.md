@@ -158,3 +158,16 @@ Using ternary operator
 ```js
 <Footer info={categories.data[0].attributes.locale === "fr" ? "Conçu et Construit par" : "Designed and Built by" } />
 ```
+
+```js
+{locale === "fr" ?
+<p> 
+" Afficher les catégories en:"
+<Link to={`/home/en`}>Anglais</Link>
+</p>
+ :
+ <p> 
+ " Display categories in:"
+ <Link to={`/home/fr`}>Anglais</Link>
+ </p>
+ } 

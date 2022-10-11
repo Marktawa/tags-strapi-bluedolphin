@@ -19,19 +19,19 @@ const shrinkText = (text, length) => {
 };
 
 const Index = ({ pageContext, data }) => {
-    const { name, localizations, id } = pageContext;
+    const { name, locale, id } = pageContext;
     const [currentLang, setCurrentLang] = useState("en")
     const { categories } = data.strapi
 
     return (
         <Layout>
-            <Header about={categories.data[0].attributes.locale === "fr" ? "À propos" : "About" } />
+            <Header about={locale === "fr" ? "À propos" : "About" } />
             <Container>
                 <Banner>
                     <br />
-                    <h4 style={{ textAlign: "center" }}>{name} ({categories.data[0].attributes.locale === "fr" ? "Français" : "English"})</h4>
+                    <h4 style={{ textAlign: "center" }}>{name} ({locale === "fr" ? "Français" : "English"})</h4>
 
-                    <p>{categories.data[0].attributes.locale === "fr" ? " Afficher les produits en:" : " Display products in:"}
+                    <p>{locale === "fr" ? " Afficher les produits en:" : " Display products in:"}
                         {categories.data[0].attributes.localizations.data.map((localization) =>
                             <Link to={`/category/${id}/${localization.attributes.locale.toLowerCase()}`} >
                                 <span style={{ padding: "0.5rem" }} > {localization.attributes.locale === "fr" ? "French" : "Anglais"} </span>
@@ -56,19 +56,19 @@ const Index = ({ pageContext, data }) => {
                                 <Flex direction="row" justify="space-between">
                                     <div>
                                         <p style={{ textAlign: "left" }}>
-                                            {categories.data[0].attributes.locale === "fr" ? ` € ${product.attributes.price}` : ` $ ${product.attributes.price}`}
+                                            {locale === "fr" ? ` € ${product.attributes.price}` : ` $ ${product.attributes.price}`}
                                         </p>
                                     </div>
 
                                     <div>
-                                        <Button>{categories.data[0].attributes.locale === "fr" ? "Acheter Maintenant" : "Buy Now"}</Button>
+                                        <Button>{locale === "fr" ? "Acheter Maintenant" : "Buy Now"}</Button>
                                     </div>
                                 </Flex>
                             </div>
                         </Item>
                     ))}
                 </Cards>
-                <Footer info={categories.data[0].attributes.locale === "fr" ? "Conçu et Construit par" : "Designed and Built by" } />
+                <Footer info={locale === "fr" ? "Conçu et Construit par" : "Designed and Built by" } />
             </Container>
         </Layout>
     );

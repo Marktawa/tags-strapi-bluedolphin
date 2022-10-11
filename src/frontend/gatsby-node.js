@@ -52,30 +52,36 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Template to create dynamic pages from.
     const categoryTemplate = path.resolve(`src/pages/categories.js`);
+    const homeTemplate = path.resolve(`src/pages/home.js`)
 
     categoriesQuery.data.strapi.categories.data.forEach(
         (category) => {
             if (category.attributes.localizations.data.length > 0) {
                 category.attributes.localizations.data.forEach((localization) => {
                     localization.attributes.locale
-                    return createPage({
+                    createPage({
                         path: `category/${category.id}/${localization.attributes.locale.toLowerCase()}`,
                         component: categoryTemplate,
                         context: {
                             slug: category.attributes.slug, 
                             name: category.attributes.name, 
-                            title: category.attributes.title,
                             id: category.id, 
-                            price: category.attributes.price, 
                             products: category.attributes.products, 
                             locale: localization.attributes.locale,
                             localizations: category.attributes.localizations
+                        },
+                    });
+                    createPage({
+                        path: `home/${localization.attributes.locale.toLowerCase()}`,
+                        component: homeTemplate,
+                        context: {
+                            locale: localization.attributes.locale,   
                         },
                     })
                 })
             }
 
-            return createPage({
+            createPage({
                 path: `category/${category.id}/${category.attributes.locale}`,
                 component: categoryTemplate,
                 context: { 
@@ -85,6 +91,13 @@ exports.createPages = async ({ graphql, actions }) => {
                     products: category.attributes.products, 
                     locale: category.attributes.locale,
                     localizations: category.attributes.localizations 
+                },
+            });
+            createPage({
+                path: `home/${category.attributes.locale}`,
+                component: homeTemplate,
+                context: {
+                    locale: category.attributes.locale,   
                 },
             })
         }

@@ -28,7 +28,7 @@ const HeaderComponent = (props) => (
   <Header>
     <nav>
       <div>
-        <Link to="/home">
+        <Link to="/home/en">
           <h5> STRAPI ECOM APP </h5>
         </Link>
       </div>
