@@ -46,7 +46,8 @@ To keep this article focused on its primary goal, we will not create a new Strap
 The demo application will be an eCommerce store containing localized content for courses to be sold. Using the [i18n plugin](https://strapi.io/features/internationalization), the eCommerce application will serve localized content from two locales to a front-end application built with Gatsby.
 
 The complete app should be similar to this:
-![Complete app](https://www.dropbox.com/s/vfspezp4nis5xnm/placeholder.png?raw=1)
+
+https://youtu.be/-0HHEt6j2f0
 
 If you are interested in trying out the finished app of this tutorial before going through the article, [clone the Github repo](https://github.com/Marktawa/tags-strapi-bluedolphin).
 
@@ -267,7 +268,7 @@ After the installation process is completed, you run the development server of t
 /bluedolphin $ cd frontend
 ```
 
-# Step 8: Add a Wrapper
+# Step 8: Add Wrapper, Header and Footer Components
 
 Create a `components` folder within the `src` directory.
 ```bash
@@ -304,6 +305,105 @@ export default Layout;
 ```
 The code above creates a wrapper using React-helmet to wrap each page with styles from [Bootstrap](https://getbootstrap.com/docs/3.3/getting-started/) using a CDN link.
 
+For the site's header, create a `header.js` file in the components folder. 
+```bash
+/bluedolphin/frontend $ touch src/components/header.js
+```
+
+Add the following code to your `header.js` file:
+
+```js
+// ./src/components/header.js
+
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+
+const Header = styled.header`
+  height: 55px;
+  background-color: #1a124b;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  box-shadow: 0 2px 3px white;
+  nav {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    h5 {
+      font-size: 1.1rem;
+    }
+  }
+`;
+
+const HeaderComponent = (props) => (
+  <Header>
+    <nav>
+      <div>
+        <Link to="/">
+          <h5> STRAPI ECOM APP </h5>
+        </Link>
+      </div>
+
+      <div>
+        <p>{props.about}</p>
+      </div>
+    </nav>
+  </Header>
+);
+
+export default HeaderComponent;
+```
+
+This creates a header which will be displayed across all pages for your Gatsby app. The title I used for the app is "STRAPI ECOM APP". The `props.about` will help in rendering locale specific text using a conditional operator when the Header component is used
+
+For the site's footer, create a `footer.js` file in the components folder. 
+```bash
+/bluedolphin/frontend $ touch src/components/footer.js
+```
+
+Add the following code to your `footer.js` file:
+
+```js
+// ./src/components/footer.js
+
+import React from "react";
+import styled from "styled-components";
+
+const Footer = styled.footer`
+  height: 55px;
+  background-color: #1a124b;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h5 {
+      padding-top : 10px;
+      font-size: 1.2rem;
+  }
+`;
+
+const FooterComponent = (props) => (
+  <Footer>
+    <h5>
+      {" "}
+      Designed and built by{" "}
+      <a href="https://github.com/Marktawa"> Mark Munyaka </a>{" "}
+    </h5>
+  </Footer>
+);
+
+export default FooterComponent;
+```
+
+This code creates a footer to be displayed across all pages in your site. The `props.info` will help in rendering locale specific text using a conditional operator when the Footer component is imported.
+
 # Step 9: Add Styling
 
 Create a `styles.js` file in the `src` directory. 
@@ -324,13 +424,14 @@ import styled from "styled-components";
 export const Cards = styled.ul`
     display: grid;
     padding-top: 1rem;
+    padding-bottom: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 2rem 1rem;
     place-items: center;
 `;
     
 export const Item = styled.div`
-    height: 370px;
+    height: 400px;
     width: 300px;
     border-radius: 7px;
     box-shadow: 0 2px 3px #c0c0c0;
@@ -339,10 +440,10 @@ export const Item = styled.div`
     text-align: center;
     div {
     padding: 0.1rem 0.5rem;
-    h4 {
-        text-align: center;
-        font-weight: 600;
-    }
+        h4 {
+            text-align: center;
+            font-weight: 600;
+        }
     }
 `;
     
@@ -369,7 +470,7 @@ export const Flex = styled.div`
 `;
     
 export const Banner = styled.div`
-    padding: 2rem 3rem;
+    padding: 0.4rem 0.5rem;
     text-align: center;
     h4 {
     font-weight: 600;
@@ -384,10 +485,9 @@ export const CategoryCtn = styled.div`
     border-radius: 5px;
     box-shadow: 0 2px 3px #c0c0c0;
 `
-    
+   
 export const Container = styled.div`
     background: #ebf4fd;
-    height: calc(100vh - 110px);
 `;
 ```
 
@@ -405,6 +505,10 @@ Modify the `gatsby-config.js` file in the root of your `frontend` folder with th
 
 ```js
 // ./gatsby-config.js
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
     siteMetadata: {
@@ -439,18 +543,18 @@ Also, using the [*gatsby-source-graphql*](https://www.gatsbyjs.com/plugins/gatsb
 
 You probably don't have the `GATSBY_STRAPI_GRAPHQL_ENDPOINT` environment variable yet.
 
-Create a `.env` file in the root folder of your Gatsby application.
+Create a `.env.development` file in the root folder of your Gatsby application.
 
 ```bash
-/bluedolphin/frontend $ touch .env
+/bluedolphin/frontend $ touch .env.development
 ```
 
-Add the following code to `.env`.
+Add the following code to `.env.development`.
 
 ```rb
-# ./.env
+# ./.env.development
 
-GATSBY_STRAPI_GRAPHQL_ENDPOINT="http://localhost:1337/api"
+GATSBY_STRAPI_GRAPHQL_ENDPOINT="http://localhost:1337"
 ```
 
 Next, restart the Gatsby development server. Press `Ctrl` plus `C` on your keyboard to stop the server and then start it using `yarn start`.
@@ -463,7 +567,9 @@ This ensures the remote Strapi schema will be merged into the Gatsby application
 
 # Step 11: Test GraphQL
 
-Using GraphQL editor for your Gatsby application at [http://localhost:8000/___graphql](http://localhost:8000/___graphql), test the GraphQL Query in the image below that you would make from the gatsby application to retrieve data from your Strapi Application.
+Let's test our Gatsby application and see if it can retrieve data from the Strapi backend.
+
+Use the GraphQL editor for your Gatsby application at [http://localhost:8000/___graphql](http://localhost:8000/___graphql) and test the GraphQL Query in the image below. 
 
 ![Gatsby GraphiQL Playground](https://www.dropbox.com/s/9skzydypvedupio/gatsby-graphql-playground-tinyp.png?raw=1)
 
@@ -490,60 +596,102 @@ const path = require("path");
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
-    const productsQuery = await graphql(`
+    const categoriesQuery = await graphql(`
     query getData {
         strapi {
-        categories(locale: "all") {
-            locale
-            id
-            name
-            slug
-            localizations {
-                locale
+            categories(locale: "all") {
+                data {
+                    id
+                    attributes {
+                        name
+                        slug
+                        locale
+                        localizations {
+                            data  {
+                                attributes {
+                                    locale
+                                }
+                            }
+                        }
+                        products {
+                            data {
+                                id
+                                attributes {
+                                    locale
+                                    title
+                                    description
+                                    price
+                                    slug
+                                    image {
+                                        data {
+                                            attributes {
+                                                url
+                                                provider
+                                                width
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            products {
-            locale
-            title
-            description
-            price
-            slug
-            image {
-                provider
-                width
-            }
-            }
-        }
         }
     }
     `);
 
     // Template to create dynamic pages from.
-    const productsTemplate = path.resolve(`src/pages/products.js`);
+    const categoryTemplate = path.resolve(`src/pages/categories.js`);
+    const homeTemplate = path.resolve(`src/pages/home.js`)
 
-    productsQuery.data.strapi.categories.forEach(
-    ({ title, id, products, price, slug, name, localizations, locale }) =>
-    {
-        if (localizations.length > 0) {
-            localizations.forEach((data) => {
-                data.locale
-                    return createPage({
-                        path: `product/${id}/${data.locale.toLowerCase()}`,
-                        component: productsTemplate,
-                        context: { 
-                        slug, name, title,
-                        id, price, products, locale : data.locale, 
-                        localizations 
+    categoriesQuery.data.strapi.categories.data.forEach(
+        (category) => {
+            if (category.attributes.localizations.data.length > 0) {
+                category.attributes.localizations.data.forEach((localization) => {
+                    localization.attributes.locale
+                    createPage({
+                        path: `category/${category.id}/${localization.attributes.locale.toLowerCase()}`,
+                        component: categoryTemplate,
+                        context: {
+                            slug: category.attributes.slug, 
+                            name: category.attributes.name, 
+                            id: category.id, 
+                            products: category.attributes.products, 
+                            locale: localization.attributes.locale,
+                            localizations: category.attributes.localizations
+                        },
+                    });
+                    createPage({
+                        path: `home/${localization.attributes.locale.toLowerCase()}`,
+                        component: homeTemplate,
+                        context: {
+                            locale: localization.attributes.locale,   
                         },
                     })
+                })
+            }
+
+            createPage({
+                path: `category/${category.id}/${category.attributes.locale}`,
+                component: categoryTemplate,
+                context: { 
+                    slug: category.attributes.slug, 
+                    name: category.attributes.name, 
+                    id: category.id, 
+                    products: category.attributes.products, 
+                    locale: category.attributes.locale,
+                    localizations: category.attributes.localizations 
+                },
+            });
+            createPage({
+                path: `home/${category.attributes.locale}`,
+                component: homeTemplate,
+                context: {
+                    locale: category.attributes.locale,   
+                },
             })
         }
-
-        return createPage({
-            path: `product/${id}/${locale}`,
-            component: productsTemplate,
-            context: { slug, name, title, id, price, products, locale, localizations }
-        })
-    }
     );
 };
 ```
@@ -564,24 +712,24 @@ When an iteration is made, we also check if the category has localized content i
 
 If a collection type has localized content in our use case, a new dynamic page is created to display content in that locale.
 
-Before we restart the Gatsby development server for the new changes in the `gatsby-node.js` file to take effect we will create the `product` template and a `home` page to display all categories.
+Before we restart the Gatsby development server for the new changes in the `gatsby-node.js` file to take effect we will create the `category` template and a `home` page to display all categories.
 
-# Step 13: Add Products Page
+# Step 13: Add Categories Page
 
-Create a `products.js` file in the `src/pages` directory.
+Create a `categories.js` file in the `src/pages` directory.
 
 ```bash
-/bluedolphin/frontend $ touch src/pages/products.js
+/bluedolphin/frontend $ touch src/pages/categories.js
 ```
 
-Copy and paste the following code into your `products.js` file:
+Copy and paste the following code into your `categories.js` file:
 
 ```js
-// ./src/pages/products.js
+// ./src/pages/categories.js
 
 import React, { useState } from "react";
-import { Cards, Item, Button, Image, Flex, Banner, Container } from "./styles";
-import {graphql, Link, navigate} from 'gatsby'
+import { Cards, Item, Button, Image, Flex, Banner, Container } from "../styles";
+import { graphql, Link, navigate } from 'gatsby'
 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -591,87 +739,117 @@ const shrinkText = (text, length) => {
     let txt = text.split(" ");
 
     if (txt.length < 7) {
-    return text;
+        return text;
     }
 
-    return [ ...txt.splice(0, length), '...' ].join(" ")
+    return [...txt.splice(0, length), '...'].join(" ")
 };
 
 const Index = ({ pageContext, data }) => {
-    const { name, localizations, id } = pageContext;
+    const { name, locale, id } = pageContext;
+    const [currentLang, setCurrentLang] = useState("en")
     const { categories } = data.strapi
 
     return (
-    <Layout>
-        <Header />
-        <Container>
-        <Banner>
-            <br />
-            <h4 style={{ textAlign: "center" }}> {name} </h4>
+        <Layout>
+            <Header about={locale === "fr" ? "À propos" : "About" } />
+            <Container>
+                <Banner>
+                    <br />
+                    <h4 style={{ textAlign: "center" }}>{name} ({locale === "fr" ? "Français" : "English"})</h4>
 
-            <p> Display products in:
-            {categories[0].localizations.map(({ locale}) =>
-                <Link to={`/product/${id}/${locale.toLowerCase()}`} >
-                    <span style={{padding : "0 .5rem"}} > {locale} </span>
-                </Link>
-            )}
-            </p>
-        </Banner>
-        <hr />
+                    <p>{locale === "fr" ? " Afficher les produits en:" : " Display products in:"}
+                        {categories.data[0].attributes.localizations.data.map((localization) =>
+                            <Link to={`/category/${id}/${localization.attributes.locale.toLowerCase()}`} >
+                                <span style={{ padding: "0.5rem" }} > {localization.attributes.locale === "fr" ? "French" : "Anglais"} </span>
+                            </Link>
+                        )}
+                    </p>
+                </Banner>
+                <hr />
 
-        <Cards>
-            {categories.map(({products}) =>
-                products.map(({ id, title, price, description }) => (
-                    <Item key={id}>
-                        <div>
-                        <Image
-                            src={
-                                "https://res.cloudinary.com/dkfptto8m/image/upload/v1620468926/shirts.jpg"
-                            }
-                        />
-                        <h5> {title} </h5>
-                        <p style={{opacity : ".8"}} >{shrinkText(description, 4)} </p>
-
-                        <Flex direction="row" justify="space-between">
+                <Cards>
+                    {categories.data[id - 1].attributes.products.data.map((product) => (
+                        <Item key={product.id}>
                             <div>
-                            <p style={{ textAlign: "left" }}> ${price} </p>
-                            </div>
+                                <Image
+                                    src={
+                                        `http://localhost:1337${product.attributes.image.data.attributes.url}`
+                                    }
+                                />
+                                <h5> {product.attributes.title} </h5>
+                                <p style={{ opacity: ".8" }} >{shrinkText(product.attributes.description, 4)} </p>
 
-                            <div>
-                            <Button>Buy Now</Button>
+                                <Flex direction="row" justify="space-between">
+                                    <div>
+                                        <p style={{ textAlign: "left" }}>
+                                            {locale === "fr" ? ` € ${product.attributes.price}` : ` $ ${product.attributes.price}`}
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <Button>{locale === "fr" ? "Acheter Maintenant" : "Buy Now"}</Button>
+                                    </div>
+                                </Flex>
                             </div>
-                        </Flex>
-                        </div>
-                    </Item>
-                )))}
-        </Cards>
-        <Footer />
-        </Container>
-    </Layout>
+                        </Item>
+                    ))}
+                </Cards>
+                <Footer info={locale === "fr" ? "Conçu et Construit par" : "Designed and Built by" } />
+            </Container>
+        </Layout>
     );
 };
 
 export const query = graphql`
-        query fetchLocaleData($locale: String) {
-            strapi {
+    query fetchLocaleData($locale: STRAPI_I18NLocaleCode) {
+        strapi {
             categories(locale: $locale) {
-                localizations {
-                    locale
+                data {
+                    id
+                    attributes {
+                        name
+                        slug
+                        locale
+                        localizations {
+                            data {
+                                attributes {
+                                    locale
+                                }
+                            }
+                        }
+                        products(sort: "id", pagination: {pageSize: 20}) {
+                            data {
+                                id
+                                attributes {
+                                    locale
+                                    title
+                                    description
+                                    price
+                                    slug
+                                    image {
+                                        data {
+                                            attributes {
+                                                url
+                                                provider
+                                                width
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                products {
-                title
-                description
-                price
-                }
-            }
             }
         }
+    }
 `
 
 export default Index;
 ```
 
-Going through the code block above, which makes up the product component, you would observe the following:
+Going through the code block above, which makes up the category component, you would observe the following:
 
 - Although the page is created dynamically using the `createPages` API, the component makes an extra graphQL query to fetch localised content using the locale value passed in from the [createPages](https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) API when the page is created dynamically.
 - All available locales are displayed at the top banner giving users the feature to click on the links to view the page content in another locale.
@@ -682,25 +860,26 @@ Restart your Gatsby development server for the changes to take effect:
 /bluedolphin/frontend $ yarn start
 ```
 
-Navigate to the [http://localhost:8000/product/1/en](http://localhost:8000/product/1/en), it should display the product page with an `id` of *1*, having *back* as the category name as shown below;
+Navigate to the [http://localhost:8000/category/1/en](http://localhost:8000/category/1/en), it should display the product page with an `id` of `1`, having **Back** as the category name as shown below;
 
-![Products Page for Backend Category](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621171307816_category-products.png)
+![Products Page for Backend Category](https://www.dropbox.com/s/4uju9zzq7mj66w8/products-page-for-backend-category-tinyp.png?raw=1)
 
 
-The image above shows all products within the **Backend** category served in the English (`en`) locale. The top banner contains links to other pages containing products for the same category but in a different locale.
+The image above shows all products within the **Back** category served in the English (`en`) locale. The top banner contains links to other pages containing products for the same category but in a different locale.
 
 For example, clicking the `fr` link would display products in the French locale as shown below:
 
-![Products Page for Backend Category (French Locale)](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621171393979_fr-product.png)
-
-
-Above, we can see the recently created product with the backend category displayed in the `fr` locale.
+![Products Page for Backend Category (French Locale)](https://www.dropbox.com/s/z3t61dos4jeln0y/products-page-for-backend-category-fr-tinyp.png?raw=1)
 
 # Step 14: Add Home Page
 
 Next, create a home page that loads all categories with links to their respective products.
 
 Create a `home.js` file within the `src/pages` directory.
+
+```bash
+/bluedolphin/frontend $ touch src/pages/home.js
+```
 
 Copy and paste the following code into your `home.js` file:
 
@@ -718,97 +897,128 @@ import {
     Banner,
     Cards,
     CategoryCtn,
-} from "./styles";
+} from "../styles";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 
 const Index = ({ pageContext }) => {
-    const {strapi} = useStaticQuery(graphql`
-    query fetchAllCourses {
+    const { locale } = pageContext;
+    const { strapi } = useStaticQuery(graphql`
+    query fetchAllCourses($locale: STRAPI_I18NLocaleCode) {
         strapi {
-        categories {
-            id
-            name
-            created_at
-            slug
-            locale
-            products { id }
-        }
+            categories(locale: $locale) {
+                data {
+                    id
+                    attributes {
+                        name
+                        createdAt
+                        slug
+                        locale
+                        localizations {
+                            data {
+                                attributes {
+                                    locale
+                                }
+                            }
+                        }
+                        products(sort: "id", pagination: {pageSize: 20}) {
+                            data {
+                                id
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     `);
 
     return (
-    <Layout>
-        <Header />
-        <Container>
-        <Banner>
-            <h4> STRAPI COURSE STORE </h4>
-            <p> A Course Store With Support For Internationalization </p>
-        </Banner>
-        <hr />
-
-        <Cards >
-            {strapi.categories.map(({ id, name, products, created_at, locale }) => (
-            <CategoryCtn key={id}>
-                <div>
-                <Link to={`/product/${id}/${locale}`}>
-                    <h5> {name} </h5>
-                </Link>
-                <Flex
-                    direction="row"
-                    style={{
-                    opacity: ".8",
-                    }}
-                >
-                    <div
-                    style={{
-                        marginRight: ".3rem",
-                    }}
-                    >
-                    <FiCalendar size={19} />
-                    </div>
-
-                    <div>Added {moment(created_at).format("dddd mm yyyy")}</div>
-                </Flex>
+        <Layout>
+            <Header about={locale === "fr" ? "À propos" : "About"} />
+            <Container>
+                <Banner>
+                    <h4> {locale === "fr" ? "MAGASIN DE COURS STRAPI" : "STRAPI COURSE STORE"} </h4>
+                    <p> {locale === "fr" ? "Un Magasin De Cours Avec Prise En Charge De l'Internationalisation" : "A Course Store With Support For Internationalization"} </p>
+                    {locale === "fr" ?
+                        <p>
+                            Afficher les catégories en: 
+                            <Link to={`/home/en`}> Anglais</Link>
+                        </p>
+                        :
+                        <p>
+                            Display categories in:  
+                            <Link to={`/home/fr`}> French</Link>
+                        </p>}
+                </Banner>
                 <hr />
-                <br />
 
-                <Flex direction="row">
-                    <div
-                    style={{
-                        marginRight: ".3rem",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                    >
-                    <FiBook size={19} />
-                    </div>
+                <Cards >
+                    {strapi.categories.data.map((category) => (
+                        <CategoryCtn key={category.id}>
+                            <div>
+                                <Link to={`/category/${category.id}/${locale}`}>
+                                    <h5> {category.attributes.name} </h5>
+                                </Link>
+                                <Flex
+                                    direction="row"
+                                    style={{
+                                        opacity: ".8",
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            marginRight: ".3rem",
+                                        }}
+                                    >
+                                        <FiCalendar size={19} />
+                                    </div>
 
-                    <div
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                    >
-                    {products.length} Courses Available
-                    </div>
-                </Flex>
-                </div>
-            </CategoryCtn>
-            ))}
-        </Cards>
-        <Footer />
-        </Container>
-    </Layout>
+                                    <div>{locale === "fr" ? "Ajouté" : "Added"} {moment(category.attributes.createdAt).format("MM/DD/YYYY")}</div>
+                                </Flex>
+                                <hr />
+                                <br />
+
+                                <Flex direction="row">
+                                    <div
+                                        style={{
+                                            marginRight: ".3rem",
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <FiBook size={19} />
+                                    </div>
+
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        {category.attributes.products.data.length} {locale === "fr" ? "Cours Disponibles" : "Courses Available"}
+                                    </div>
+                                </Flex>
+                            </div>
+                        </CategoryCtn>
+                    ))}
+                </Cards>
+                <Footer info={locale === "fr" ? "Conçu et Construit par" : "Designed and Built by"} />
+            </Container>
+        </Layout>
     );
 };
 
 export default Index;
 ```
+
+The home page you have just created displays all categories with a clickable link to each one. It supports internationalization, so if you navigate to [localhost:8000/home/en](http://localhost:8000/home/en) you'll find the English version of the page and navigating to [localhost:8000/home/fr](http://localhost:8000/home/fr) gives you the French version.
+
+
+# Step 15: Test App
 
 Restart your server for the changes to take effect:
 
@@ -817,14 +1027,15 @@ Restart your server for the changes to take effect:
 /bluedolphin/frontend $ yarn start
 ```
 
-# Step 15: Test App
+Navigate to your Gatsby application's homepage, [localhost:8000/home/en](http://localhost:8000/home/en). If it is working correctly, you should see the categories fetched from your Strapi application.
 
-Navigate to your Gatsby application's homepage, [http://localhost:8000](http://localhost:8000). If it is working correctly, you should see the categories fetched from your Strapi application.
+![Home Page in English](https://www.dropbox.com/s/porrqwfncchvva3/home-page-english-tinyp.png?raw=1)
 
-![Gatsby App Home Page](https://paper-attachments.dropbox.com/s_E9465E6BF58AAED0BF9285C24F68A0129D259F28691705ADE2170BBEFA500B1A_1621171710203_strapi-categories.png)
+For the French version of the homepage go to [localhost:8000/home/fr](http://localhost:8000/home/fr). Likewise all the categories should be visible and linking you to the French version of the category pages.
 
+![Home Page in French](https://www.dropbox.com/s/s0jc4xgj6zzn2wr/home-page-french-tinyp.png?raw=1)
 
-At this point, clicking on any of the categories shown in the image above would navigate you to the product page showing the list of products within that category.
+At this point, clicking on any of the categories would navigate you to the category page showing the list of products within that category.
 
 # Conclusion
 
@@ -832,13 +1043,15 @@ Huge congrats to you. By going through this article, you have learned about Inte
 
 First, we started by explaining what the terms localization and Internationalization meant.
 
-Secondly, we cloned an existing Strapi application using the eCommerce template. Then, we created a new locale and enabled localization on the current content types from the admin panel, after which we inserted a new product in a French (`fr`) locale.
+Secondly, we cloned an existing Strapi application using the eCommerce template. Then, we created a new locale and enabled localization on the current content types from the admin panel. After which we added entries for **Products** and **Categories** collection types in `French (fr)` locale.
 
-Lastly, we created a new Gatsby application to fetch localized data from the Strapi application.
+Lastly, we created a new Gatsby application to fetch localized data from the Strapi application using the GraphQL API.
 
 The [source code](https://github.com/Marktawa/tags-strapi-bluedolphin) for this tutorial is available for you to test.
 
 What next? 
 
-Check out some deployment guides if you want to know how to deploy this app in production. Or add some more functionality to this app using plugins in the [Strapi Marketplace](https://market.strapi.io).
+Check out some deployment guides if you want to know how to deploy this app in production. Add some more functionality to this app using plugins in the [Strapi Marketplace](https://market.strapi.io). Here's a suggestion, instead of translating your Strapi entries manually use [Localazy](https://market.strapi.io/plugins/@localazy-strapi-plugin) instead. Check out this [tutorial to get started with Localazy and Strapi](https://strapi.io/blog/strapi-localization-made-easy-with-localazy-plugin).
+
+
 
