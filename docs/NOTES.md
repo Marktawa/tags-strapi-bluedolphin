@@ -170,4 +170,54 @@ Using ternary operator
  " Display categories in:"
  <Link to={`/home/fr`}>Anglais</Link>
  </p>
- } 
+ }
+ ```
+
+ # Suggestions
+
+ - Add References section to article
+ - Host article images on another image hosting platform besides dropbox
+ - Improve README sections for all key folders `docs`, `src` , root folder, and `tests`
+ - Improve test data
+ - Add individual product page with pagination
+ - Handle content data from Strapi side
+ - Fix GraphQL queries
+ - Add vale to repo for document editing and proofreading
+ - Implement markdown emmet
+ - Learn Google Documentation Style Guide
+ - Create auto gh repo for strapi projects (folders, gitignore, license, readme) 
+ - Create auto codespace or gitpod with (ffmpeg, tree, glixcer, vale)
+ - Create auto vscode config with (md, vale, word wrap, no minimap)
+ 
+# References
+
+- [Strapi - REST API: Filtering, Locale, and Publication State](https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest/filtering-locale-publication.html)
+- [Strapi - Internationalization (i18n)](https://docs.strapi.io/developer-docs/latest/plugins/i18n.html)
+- [Strapi - GraphQL API](https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/graphql-api.html)
+- [Strapi - GraphQL](https://docs.strapi.io/developer-docs/latest/plugins/graphql.html)
+- [Stackoverflow - How can I embed a YouTube video on GitHub wiki pages?](https://stackoverflow.com/questions/11804820/how-can-i-embed-a-youtube-video-on-github-wiki-pages)
+- [TinyPNG - Best Image Compression](https://tinypng.com/)
+- [Promotion Template for Writers](https://strapi.notion.site/Promotion-Template-for-Writers-1645b77a97a640d2a32047297b6bc3f0)
+- [**Original Article**](https://strapi.io/blog/building-applications-for-an-international-audience-using-strapi-i18n-plugin)
+- [**Original Repo**](https://github.com/vickywane/strapi-i18n)
+- [Github - Forwarding ports in your codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace)
+- [Section - Getting Started With React, Strapi, and GraphQL](https://www.section.io/engineering-education/getting-started-with-react-strapi-graphql/)
+- [Geeks for Geeks - Difference between forEach() and map() loop in JavaScript](https://www.geeksforgeeks.org/difference-between-foreach-and-map-loop-in-javascript/)
+- [Mozilla - Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- [Mozilla - Array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [Stackoverflow - Access array inside an object](https://stackoverflow.com/questions/29140301/access-array-inside-an-object)
+- [Gatsby - Environment Variables](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
+- [Momentjs](https://momentjs.com/)
+- [Gatsby - Creating and Modifying Pages](https://www.gatsbyjs.com/docs/creating-and-modifying-pages/)
+- [Gatsby - GraphiQL](http://localhost:8000/__graphql)
+- [Strapi - GraphQL Playground](http://localhost:1337/graphql)
+- [Gatsby - Actions](https://www.gatsbyjs.com/docs/reference/config-files/actions/)
+- [Bannerbear - How to Make a GIF from a Video Using FFmpeg](https://www.bannerbear.com/blog/how-to-make-a-gif-from-a-video-using-ffmpeg/)
+- [Visual Studio Code - Github Codespaces](https://code.visualstudio.com/docs/remote/codespaces)
+- [Shotstack - How to trim a video using FFmpeg](https://shotstack.io/learn/use-ffmpeg-to-trim-video/)
+- [Stack Exchange - How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/questions/556029/how-do-i-convert-a-video-to-gif-using-ffmpeg-with-reasonable-quality)
+- [Reactjs - Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+- [Reactjs - Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [Reactjs - Components and Props](https://reactjs.org/docs/components-and-props.html)
+- [Mozilla - Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [**Project Repo**](https://github.com/Marktawa/tags-strapi-bluedolphin)
