@@ -1,0 +1,14 @@
+{
+    "en": {
+        "title": "Angular",
+        "description": "One framework, Mobile & desktop",
+        "price": "1.84",
+        "slug": "angular"
+    },
+    "fr": {
+        "title": "Angular",
+        "description": "Un cadre, mobile et ordinateur de bureau",
+        "price": "1.84",
+        "slug": "angular"
+    }
+}
