@@ -187,7 +187,8 @@ Using ternary operator
  - Learn Google Documentation Style Guide
  - Create auto gh repo for strapi projects (folders, gitignore, license, readme) 
  - Create auto codespace or gitpod with (ffmpeg, tree, glixcer, vale)
- - Create auto vscode config with (md, vale, word wrap, no minimap)
+ - Create auto vscode config with (md, vale, word wrap, no minimap
+ - Remove audio from video using `ffmpeg`
  
 # References
 
@@ -221,3 +222,4 @@ Using ternary operator
 - [Reactjs - Components and Props](https://reactjs.org/docs/components-and-props.html)
 - [Mozilla - Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 - [**Project Repo**](https://github.com/Marktawa/tags-strapi-bluedolphin)
+- [**Project Video Demo**](https://www.youtube.com/watch?v=-0HHEt6j2f0)
