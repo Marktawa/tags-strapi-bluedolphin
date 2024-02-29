@@ -2,7 +2,9 @@
 
 # How to Build An App With Internationalization Using Gatsby and Strapi i18n Plugin
 
-This repository serves as a code container for the tutorial I wrote on [Strapi's Blog](https://strapi.io/blog/).
+[**TUTORIAL LINK**](https://strapi.io/blog/how-to-build-an-app-with-internationalization-using-gatsby-and-strapi-i18n-plugin)
+
+This repository serves as a code container for the tutorial I wrote on [Strapi's Blog]([https://strapi.io/blog](https://strapi.io/blog/how-to-build-an-app-with-internationalization-using-gatsby-and-strapi-i18n-plugin)/).
 
 ## App Demo
 
